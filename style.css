@@ -1,0 +1,140 @@
+/*
+
+neatly organized format OwO
+
+name {
+    colors (background, textcolor)
+
+    display properties (display, flex settings)
+
+    sizes (width, height)
+}
+
+*/
+
+/* main elements */
+body {
+    background-color: #3A3A3A;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+    min-height: 100vh;
+}
+
+.topBar {
+    background-color: #2F2F2F;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100vw;
+    height: 12.5vh;
+}
+
+.bottomBar {
+    background-color: #2F2F2F;
+
+    display: flex;
+    margin-top: auto;
+
+    width: 100vw;
+    height: 12.5vh;
+}
+
+/* fonts */
+@font-face {
+    font-family: "PetMe64";
+    src: url("assets/fonts/PetMe64.ttf");
+}
+
+@font-face {
+    font-family: "SM64";
+    src: url("assets/fonts/SM64.ttf");
+}
+
+@font-face {
+    font-family: "SourceSansBold";
+    src: url("assets/fonts/SourceSansBold.ttf");
+}
+
+@font-face {
+    font-family: "SourceSansSemiBold";
+    src: url("assets/fonts/SourceSansSemiBold.ttf");
+}
+
+/* topbar elements */
+.topBarText {
+    color: white;
+
+    font-family: "SM64";
+    margin-left: 1.25%;
+
+    font-size: 200%;
+}
+
+.topBarButtons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.25%;
+    gap: 2.5%;
+    
+    width: 50%;
+    height: 62.5%;
+}
+
+.topBarButton {
+    background-color: #3A3A3A;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30%;
+    height: 75%;
+}
+
+.topBarButton:hover {
+    background-color: #BF72BA;
+    cursor: pointer;
+}
+
+.topBarButtonSelected {
+    background-color: #FF96F5;
+}
+
+.topBarButtonText {
+    color: white;
+
+    margin: 0;
+    font-family: "SM64";
+    text-align: center;
+
+    font-size: 1.75vw;
+}
+
+/* main elements */
+.mainContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+    width: 100vw;
+    height: 75vh;
+}
+
+.mainText {
+    color: white;
+
+    margin: 0;
+    font-family: "SM64";
+    text-align: center;
+
+    font-size: 2vw;
+}
+
+/* bottombar elements */
