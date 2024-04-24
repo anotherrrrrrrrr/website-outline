@@ -12,9 +12,27 @@ name {
 
 */
 
+
+/* variables */
+:root {
+    /* font */
+    --font: "SourceSansSemiBold";
+
+    /* colors */
+    --bgColor: #3A3A3A;
+    --barColor: #2F2F2F;
+
+    /* sizes */
+    --barWidth: 100vw;
+    --barHeight: 12.5vh;
+
+    /* margins */
+    --topBarMargin: 1.25%;
+}
+
 /* main elements */
 body {
-    background-color: #3A3A3A;
+    background-color: var(--bgColor);
 
     display: flex;
     flex-direction: column;
@@ -24,37 +42,27 @@ body {
 }
 
 .topBar {
-    background-color: #2F2F2F;
+    background-color: var(--barColor);
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    width: 100vw;
-    height: 12.5vh;
+    width: var(--barWidth);
+    height: var(--barHeight);
 }
 
 .bottomBar {
-    background-color: #2F2F2F;
+    background-color: var(--barColor);
 
     display: flex;
     margin-top: auto;
 
-    width: 100vw;
-    height: 12.5vh;
+    width: var(--barWidth);
+    height: var(--barHeight);
 }
 
 /* fonts */
-@font-face {
-    font-family: "PetMe64";
-    src: url("assets/fonts/PetMe64.ttf");
-}
-
-@font-face {
-    font-family: "SM64";
-    src: url("assets/fonts/SM64.ttf");
-}
-
 @font-face {
     font-family: "SourceSansBold";
     src: url("assets/fonts/SourceSansBold.ttf");
@@ -69,8 +77,8 @@ body {
 .topBarText {
     color: white;
 
-    font-family: "SM64";
-    margin-left: 1.25%;
+    font-family: var(--font);
+    margin-left: var(--topBarMargin);
 
     font-size: 200%;
 }
@@ -79,7 +87,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 1.25%;
+    margin-right: var(--topBarMargin);
     gap: 2.5%;
     
     width: 50%;
@@ -87,7 +95,7 @@ body {
 }
 
 .topBarButton {
-    background-color: #3A3A3A;
+    background-color: var(--bgColor);
 
     display: flex;
     align-items: center;
@@ -95,6 +103,11 @@ body {
 
     width: 30%;
     height: 75%;
+}
+
+.topBarButton a {
+    color: white;
+    text-decoration: none;
 }
 
 .topBarButton:hover {
@@ -110,7 +123,7 @@ body {
     color: white;
 
     margin: 0;
-    font-family: "SM64";
+    font-family: var(--font);
     text-align: center;
 
     font-size: 1.75vw;
@@ -125,16 +138,27 @@ body {
 
     width: 100vw;
     height: 75vh;
+    height: calc(100vh - (var(--barHeight) * 2))
 }
 
 .mainText {
     color: white;
 
     margin: 0;
-    font-family: "SM64";
+    font-family: var(--font);
     text-align: center;
 
     font-size: 2vw;
 }
 
 /* bottombar elements */
+.bottomBar {
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: last baseline;
+    margin: 0;
+}
+
+.bottomBar img {
+    max-height: 95%;
+}
