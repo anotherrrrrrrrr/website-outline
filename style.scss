@@ -1,0 +1,187 @@
+// Variables
+
+// Font
+$font: "SourceSansSemiBold";
+
+// Colors
+$bgColor: #3A3A3A;
+$barColor: #2F2F2F;
+$hoverColor: #BF72BA;
+$selectedColor: #FF96F5;
+
+// Sizes
+$barWidth: 100vw;
+$barHeight: 12.5vh;
+
+// Margins
+$topBarMargin: 1.25%;
+
+// Namespace
+$namespace: (
+  font: $font,
+  bgColor: $bgColor,
+  barColor: $barColor,
+  barWidth: $barWidth,
+  barHeight: $barHeight,
+  topBarMargin: $topBarMargin
+);
+
+// Nested Elements and &
+body {
+  background-color: map-get($namespace, bgColor);
+
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  min-height: 100vh;
+
+  .topBar {
+    background-color: map-get($namespace, barColor);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: map-get($namespace, barWidth);
+    height: map-get($namespace, barHeight);
+
+    .topBarText {
+      color: white;
+      font-family: map-get($namespace, font);
+      margin-left: map-get($namespace, topBarMargin);
+      font-size: 200%;
+    }
+
+    .topBarButtons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: map-get($namespace, topBarMargin);
+      gap: 2.5%;
+      width: 50%;
+      height: 62.5%;
+
+      .topBarButton {
+        background-color: map-get($namespace, bgColor);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+        height: 75%;
+
+        a {
+          color: white;
+          text-decoration: none;
+        }
+
+        &:hover {
+          background-color: $hoverColor;
+          cursor: pointer;
+        }
+
+        &.selected {
+          background-color: $selectedColor;
+        }
+
+        .topBarButtonText {
+          color: white;
+          margin: 0;
+          font-family: map-get($namespace, font);
+          text-align: center;
+          font-size: 1.75vw;
+        }
+      }
+    }
+  }
+
+  .bottomBar {
+    background-color: map-get($namespace, barColor);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; // Changed from last baseline to flex-end
+    margin: 0;
+  }
+
+  .mainContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 100vw;
+    height: calc(100vh - (map-get($namespace, barHeight) * 2));
+
+    .mainText {
+      color: white;
+      margin: 0;
+      font-family: map-get($namespace, font);
+      text-align: center;
+      font-size: 2vw;
+    }
+
+    //i might kill myself I fucking hate scss who the fuck invented this dogshit
+    .niko {
+       max-height: 75%;
+    }
+  }
+}
+
+// Fonts
+@font-face {
+  font-family: "SourceSansBold";
+  src: url("assets/fonts/SourceSansBold.ttf");
+}
+
+@font-face {
+  font-family: "SourceSansSemiBold";
+  src: url("assets/fonts/SourceSansSemiBold.ttf");
+}
+
+// Use @media for mobile & tablet versions
+@media (max-width: 768px) {
+  body {
+    .topBar {
+      flex-direction: column;
+      .topBarText {
+        font-size: 150%;
+      }
+      .topBarButtons {
+        width: 100%;
+        .topBarButton {
+          width: 100%;
+          .topBarButtonText {
+            font-size: 3vw;
+          }
+        }
+      }
+    }
+    .mainContent {
+      .mainText {
+        font-size: 4vw;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  body {
+    .topBar {
+      .topBarText {
+        font-size: 175%;
+      }
+      .topBarButtons {
+        .topBarButton {
+          width: 40%;
+          .topBarButtonText {
+            font-size: 2.5vw;
+          }
+        }
+      }
+    }
+    .mainContent {
+      .mainText {
+        font-size: 3vw;
+      }
+    }
+  }
+}
