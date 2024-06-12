@@ -76,6 +76,11 @@ body .mainContent .mainText {
   text-align: center;
   font-size: 2vw;
 }
+
+body .mainContent .mainText a {
+  color: #FF96F5;
+}
+
 body .mainContent .niko {
   max-height: 75%;
 }
