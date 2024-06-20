@@ -44,15 +44,15 @@ body .topBar .topBarButtons .topBarButton:hover {
   background-color: #BF72BA;
   cursor: pointer;
 }
-body .topBar .topBarButtons .topBarButtonSelected {
-  background-color: #FF96F5;
-}
 body .topBar .topBarButtons .topBarButton .topBarButtonText {
   color: white;
   margin: 0;
   font-family: "SourceSansSemiBold";
   text-align: center;
   font-size: 1.75vw;
+}
+body .topBar .topBarButtons .topBarButtonSelected {
+  background-color: #FF96F5;
 }
 body .bottomBar {
   background-color: #2F2F2F;
@@ -76,11 +76,9 @@ body .mainContent .mainText {
   text-align: center;
   font-size: 2vw;
 }
-
-body .mainContent .mainText a {
+body .mainContent a {
   color: #FF96F5;
 }
-
 body .mainContent .niko {
   max-height: 75%;
 }
@@ -94,20 +92,17 @@ body .mainContent .niko {
   src: url("assets/fonts/SourceSansSemiBold.ttf");
 }
 @media (max-width: 768px) {
-  body .topBar {
-    flex-direction: column;
-  }
   body .topBar .topBarText {
-    font-size: 150%;
+    font-size: 100%;
   }
   body .topBar .topBarButtons {
-    width: 100%;
+    width: 50%;
   }
   body .topBar .topBarButtons .topBarButton {
-    width: 100%;
+    width: 30%;
   }
   body .topBar .topBarButtons .topBarButton .topBarButtonText {
-    font-size: 1vw;
+    font-size: 1.75vw;
   }
   body .mainContent .mainText {
     font-size: 4vw;
@@ -115,15 +110,20 @@ body .mainContent .niko {
 }
 @media (max-width: 1024px) and (min-width: 769px) {
   body .topBar .topBarText {
-    font-size: 175%;
+    font-size: 100%;
   }
   body .topBar .topBarButtons .topBarButton {
-    width: 40%;
+    width: 30%;
   }
   body .topBar .topBarButtons .topBarButton .topBarButtonText {
-    font-size: 2.5vw;
+    font-size: 1.75vw;
   }
   body .mainContent .mainText {
     font-size: 3vw;
+  }
+}
+@media (max-height: 625px) {
+  .kita {
+    max-height: 30%;
   }
 }/*# sourceMappingURL=style.css.map */

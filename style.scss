@@ -26,7 +26,6 @@ $namespace: (
   topBarMargin: $topBarMargin
 );
 
-// Nested Elements and &
 body {
   background-color: map-get($namespace, bgColor);
 
@@ -80,10 +79,6 @@ body {
           cursor: pointer;
         }
 
-        .topBarButtonSelected {
-          background-color: $selectedColor;
-        }
-
         .topBarButtonText {
           color: white;
           margin: 0;
@@ -92,6 +87,10 @@ body {
           font-size: 1.75vw;
         }
       }
+
+      .topBarButtonSelected {
+        background-color: $selectedColor;
+      }
     }
   }
 
@@ -99,7 +98,7 @@ body {
     background-color: map-get($namespace, barColor);
     display: flex;
     justify-content: center;
-    align-items: flex-end; // Changed from last baseline to flex-end
+    align-items: flex-end;
     margin: 0;
   }
 
@@ -119,11 +118,10 @@ body {
       font-size: 2vw;
     }
 
-    .a {
+    a {
       color: #FF96F5;
     }
     
-    //i might kill myself I fucking hate scss who the fuck invented this dogshit
     .niko {
        max-height: 75%;
     }
@@ -141,20 +139,18 @@ body {
   src: url("assets/fonts/SourceSansSemiBold.ttf");
 }
 
-// Use @media for mobile & tablet versions
 @media (max-width: 768px) {
   body {
     .topBar {
-      flex-direction: column;
       .topBarText {
-        font-size: 150%;
+        font-size: 100%;
       }
       .topBarButtons {
-        width: 100%;
+        width: 50%;
         .topBarButton {
-          width: 100%;
+          width: 30%;
           .topBarButtonText {
-            font-size: 1vw;
+            font-size: 1.75vw;
           }
         }
       }
@@ -171,13 +167,13 @@ body {
   body {
     .topBar {
       .topBarText {
-        font-size: 175%;
+        font-size: 100%;
       }
       .topBarButtons {
         .topBarButton {
-          width: 40%;
+          width: 30%;
           .topBarButtonText {
-            font-size: 2.5vw;
+            font-size: 1.75vw;
           }
         }
       }
@@ -187,5 +183,11 @@ body {
         font-size: 3vw;
       }
     }
+  }
+}
+
+@media (max-height: 625px) {
+  .kita {
+    max-height: 30%;
   }
 }
