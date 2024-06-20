@@ -80,7 +80,7 @@ body {
           cursor: pointer;
         }
 
-        &.selected {
+        .topBarButtonSelected {
           background-color: $selectedColor;
         }
 
@@ -154,7 +154,7 @@ body {
         .topBarButton {
           width: 100%;
           .topBarButtonText {
-            font-size: 3vw;
+            font-size: 1vw;
           }
         }
       }

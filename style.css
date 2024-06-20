@@ -44,7 +44,7 @@ body .topBar .topBarButtons .topBarButton:hover {
   background-color: #BF72BA;
   cursor: pointer;
 }
-body .topBar .topBarButtons .topBarButton.selected {
+body .topBar .topBarButtons .topBarButtonSelected {
   background-color: #FF96F5;
 }
 body .topBar .topBarButtons .topBarButton .topBarButtonText {
@@ -107,7 +107,7 @@ body .mainContent .niko {
     width: 100%;
   }
   body .topBar .topBarButtons .topBarButton .topBarButtonText {
-    font-size: 3vw;
+    font-size: 1vw;
   }
   body .mainContent .mainText {
     font-size: 4vw;
